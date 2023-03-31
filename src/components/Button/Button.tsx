@@ -2,7 +2,10 @@ import React from "react";
 
 interface Props {
   children: string;
-  onClick?: () => void;
+  onClick?: (event: any) => void;
+  disabled?: true | false;
+  classes?: string[];
+  type: "button" | "submit" | "reset";
   color?:
     | "primary"
     | "secondary"
@@ -16,9 +19,21 @@ interface Props {
   size?: "sm" | "lg";
 }
 
-const Button = ({ children, onClick, color = "primary" }: Props) => {
+const Button = ({
+  children,
+  onClick,
+  disabled,
+  type,
+  classes,
+  color = "primary",
+}: Props) => {
   return (
-    <button className={`btn btn-${color}`} onClick={onClick}>
+    <button
+      className={`btn btn-${color}` + (classes ? ` ${classes.join(" ")}` : "")}
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
+    >
       {children}
     </button>
   );
