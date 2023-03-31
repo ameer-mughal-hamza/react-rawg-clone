@@ -6,6 +6,7 @@ interface Props {
   disabled?: true | false;
   classes?: string[];
   type: "button" | "submit" | "reset";
+  outline?: true | false;
   color?:
     | "primary"
     | "secondary"
@@ -26,10 +27,14 @@ const Button = ({
   type,
   classes,
   color = "primary",
+  outline = false,
 }: Props) => {
   return (
     <button
-      className={`btn btn-${color}` + (classes ? ` ${classes.join(" ")}` : "")}
+      className={
+        `btn btn${outline ? "-outline" : ""}-${color}` +
+        (classes ? ` ${classes.join(" ")}` : "")
+      }
       onClick={onClick}
       disabled={disabled}
       type={type}
