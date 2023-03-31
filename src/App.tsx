@@ -1,9 +1,10 @@
-import Form from "./components/Form";
+import Form from "./components/Forms/Form";
+import ZODForms from "./components/Forms/ZODForms";
 
 function App() {
   return (
     <>
-      <Form />
+      <ZODForms />
     </>
   );
 }

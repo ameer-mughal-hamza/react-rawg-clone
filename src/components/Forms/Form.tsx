@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FieldValue, FieldValues } from "react-hook-form/dist/types";
-import Button from "./Button/Button";
+import Button from "../Button/Button";
 
 interface FormData {
   name: string;
