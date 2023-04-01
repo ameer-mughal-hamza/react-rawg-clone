@@ -1,12 +1,11 @@
-import React from "react";
 import { Card, CardBody, Heading, Text, Image, HStack } from "@chakra-ui/react";
-import { RawgGameResult } from "../../hooks/useGames";
+import { Game } from "../../hooks/useGames";
 import PlatformIconList from "../PlatformIconList/PlatformIconList";
 import CriticScore from "../CriticScore";
 import getCroppedImageUrl from "../../utilities/imageUrl";
 
 interface Props {
-  game: RawgGameResult;
+  game: Game;
 }
 
 const GameCard = ({ game }: Props) => {
