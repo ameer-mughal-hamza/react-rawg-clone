@@ -10,7 +10,7 @@ const GameGrid = () => {
   const skeletons: number[] = [1, 2, 3, 4, 5, 6];
   return (
     <div>
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10} padding="10px">
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={3} padding="10px">
         {isLoading &&
           skeletons.map((skeleton: number) => (
             <BoxContainer key={skeleton}>
