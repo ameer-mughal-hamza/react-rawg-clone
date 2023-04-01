@@ -6,6 +6,7 @@ export interface RawgGameResult {
   id: number;
   name: string;
   slug: string;
+  background_image: string;
 }
 
 export interface RawgGame {
