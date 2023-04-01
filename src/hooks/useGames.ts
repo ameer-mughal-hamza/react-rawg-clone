@@ -2,11 +2,18 @@ import { CanceledError } from "axios";
 import { useState, useEffect } from "react";
 import apiClient from "../services/apiClient";
 
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
+
 export interface RawgGameResult {
   id: number;
   name: string;
   slug: string;
   background_image: string;
+  parent_platforms: { platform: Platform }[];
 }
 
 export interface RawgGame {
@@ -34,7 +41,6 @@ function useGames() {
         if (err instanceof CanceledError) {
           return;
         }
-
         setErrors(err.message);
         setIsLoading(false);
       });
