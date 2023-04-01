@@ -28,11 +28,12 @@ const Button = ({
   classes,
   color = "primary",
   outline = false,
+  size,
 }: Props) => {
   return (
     <button
       className={
-        `btn btn${outline ? "-outline" : ""}-${color}` +
+        `btn btn${outline ? "-outline" : ""}-${color} btn-${size}` +
         (classes ? ` ${classes.join(" ")}` : "")
       }
       onClick={onClick}
