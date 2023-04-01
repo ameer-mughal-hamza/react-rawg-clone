@@ -22,7 +22,7 @@ const useGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null
   {
     params: {
       genres: selectedGenre?.id,
-      platforms: selectedPlatform?.id
+      parent_platforms: selectedPlatform?.id
     }
   }
 );
