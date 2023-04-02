@@ -8,8 +8,6 @@ import PlatformSelector from "./chakra-ui-components/PlatformSelector";
 import SortSelector from "./chakra-ui-components/SortSelector";
 import { GameQuery } from "./interfaces/app-interfaces";
 
-
-
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
