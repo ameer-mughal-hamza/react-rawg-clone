@@ -6,15 +6,11 @@ import {
   HStack,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { GameQuery } from "../../App";
-import useData from "../../hooks/useData";
-import useGames, { Game, Platform } from "../../hooks/useGames";
-import { Genre } from "../../hooks/useGenres";
+import useGames from "../../hooks/useGames";
+import { GameQuery } from "../../interfaces/app-interfaces";
 import BoxContainer from "../BoxContainer";
-import CriticScore from "../CriticScore";
 import GameCard from "../GameCard/GameCard";
 import GameCardSekelton from "../GameCardSekelton";
-import PlatformIconList from "../PlatformIconList/PlatformIconList";
 import "./GameGrid.module.css";
 
 interface Props {
@@ -36,7 +32,7 @@ const GameGrid = ({ gameQuery }: Props) => {
           </Card>
         </Box>
       )}
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={3} padding="10px">
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={6} padding="10px">
         {isLoading &&
           skeletons.map((skeleton: number) => (
             <BoxContainer key={skeleton}>
