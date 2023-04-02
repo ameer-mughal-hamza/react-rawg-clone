@@ -9,7 +9,7 @@ interface FetchResponse<T> {
   results: T[];
 }
 
-const useData = <T>(endpoint: string, gameQuery: GameQuery, requestConfig?: AxiosRequestConfig) => {
+const useData = <T>(endpoint: string, gameQuery?: GameQuery, requestConfig?: AxiosRequestConfig) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setErrors] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
