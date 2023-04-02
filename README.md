@@ -1,3 +1,4 @@
+App Link: https://rawg-clone-ameer-mughal-hamza.vercel.app/
 This React application is a clone of the popular RAWG website, which is a comprehensive database of video games, including information on ratings, reviews, and platforms. The application provides users with a similar user interface, allowing them to search and browse for video games, read reviews, and explore various game details.
 
 The main features of the application include:

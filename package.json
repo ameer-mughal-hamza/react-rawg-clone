@@ -19,7 +19,8 @@
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "vercel": "^28.18.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
