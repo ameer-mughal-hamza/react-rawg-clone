@@ -1,5 +1,6 @@
 import { AxiosRequestConfig, CanceledError } from "axios";
 import { useState, useEffect } from "react";
+import { GameQuery } from "../App";
 import apiClient from "../services/apiClient";
 import { Game } from "./useGames";
 
@@ -8,7 +9,7 @@ interface FetchResponse<T> {
   results: T[];
 }
 
-const useData = <T>(endpoint: string, deps?: any[], requestConfig?: AxiosRequestConfig) => {
+const useData = <T>(endpoint: string, gameQuery: GameQuery, requestConfig?: AxiosRequestConfig) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setErrors] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -32,7 +33,7 @@ const useData = <T>(endpoint: string, deps?: any[], requestConfig?: AxiosRequest
 
     // Cleanup function
     return () => controller.abort();
-  }, deps ? [...deps] : []);
+  }, [gameQuery]);
 
   return { data, error, isLoading };
 }

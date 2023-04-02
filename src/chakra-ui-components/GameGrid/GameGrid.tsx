@@ -6,6 +6,7 @@ import {
   HStack,
   SimpleGrid,
 } from "@chakra-ui/react";
+import { GameQuery } from "../../App";
 import useData from "../../hooks/useData";
 import useGames, { Game, Platform } from "../../hooks/useGames";
 import { Genre } from "../../hooks/useGenres";
@@ -17,12 +18,11 @@ import PlatformIconList from "../PlatformIconList/PlatformIconList";
 import "./GameGrid.module.css";
 
 interface Props {
-  selectedGenre: Genre | null;
-  selectedPlatform: Platform | null;
+  gameQuery: GameQuery;
 }
 
-const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
-  const { data, isLoading } = useGames(selectedGenre, selectedPlatform);
+const GameGrid = ({ gameQuery }: Props) => {
+  const { data, isLoading } = useGames(gameQuery);
   const skeletons: number[] = [1, 2, 3, 4, 5, 6];
 
   return (
